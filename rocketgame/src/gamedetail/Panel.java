@@ -428,9 +428,11 @@ public class Panel extends JComponent {
         g2.drawString("STAGE: " + stage, 5, 55);
         g2.drawString("TIME LEFT: " + timeLeft + "s", w - 150, 30);
         if (score / 20 > lastScore / 20) {
+       
             randomizeBackground();
             lastScore = score;
             user.resetHp();
+            timeLeft=60;
         }
 
         if (user.isAlive() && timeLeft > 0) {
